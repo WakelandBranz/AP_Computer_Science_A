@@ -20,7 +20,6 @@ public class Main {
 
         Scanner myScanner = new Scanner(System.in); // init scanner for input
 
-        // test change TEST
         // loop is used to gather inputs from user and add them to return an accurate total for our average
         // for loop goes through the amount of inputs, assigns inputs to buffer, adds buffer to total
         for (int i = 0; i < iterations; i++) {
