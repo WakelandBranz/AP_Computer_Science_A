@@ -20,12 +20,13 @@ public class Main {
 
         Scanner myScanner = new Scanner(System.in); // init scanner for input
 
+        // loop is used to gather inputs from user and add them to return an accurate total for our average
         // for loop goes through the amount of inputs, assigns inputs to buffer, adds buffer to total
         for (int i = 0; i < iterations; i++) {
-            System.out.println("Please input variable " + (i + 1) + "."); // i + 1 is so that the loop functions but the print is as intended.
+            System.out.println("Please input variable " + (i + 1) + "."); // i + 1 is so that the loop functions, but the print is as intended.
             buffer = myScanner.nextInt(); // get next integer
 
-            System.out.println("Input " + (i + 1) + " - " + buffer); // i + 1 is so that the loop functions but the print is as intended.
+            System.out.println("Input " + (i + 1) + " - " + buffer); // i + 1 is so that the loop functions, but the print is as intended.
             total += buffer; // total = total + buffer, this adds all buffer values to total so we have an accurate total
         }
 
