@@ -20,7 +20,6 @@ public class Main {
         // basic printing
         System.out.print("My name is " + fullName + ".\nMy first name is " + firstName.length() + " letters long.\n");
         System.out.print("A substring of my name is " + fullName.substring(5, 8) + " (positions 5..8).\n");
-
     }
 }
 /*
