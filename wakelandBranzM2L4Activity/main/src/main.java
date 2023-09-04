@@ -28,4 +28,9 @@ By: Wakeland Branz
  - Module 2 Lesson 4 Activity -
 Variable res = Hello good buddy. It's length is 17.
 My dog's name is Bluebell.
+
+The variable names used in the first video are bad variables names because they are not easily
+legible for the writer of the code and other people to read and immediately understand their purpose.  
+The second video's variable names are meaningful and effectively represent what they store, so
+they are good variable names.
  */
