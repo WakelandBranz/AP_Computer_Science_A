@@ -9,7 +9,7 @@
  * What I Learned:  Python handles strings similarly to how Java does because they are high level languages.  C++ and Rust require a lot more steps to manipulate strings, unfortunately.
  */
 
-public class main {
+public class Main {
     public static void main(String[] args) throws Exception {
         // introductory print
         System.out.print("By: Wakeland Branz\n - Module 2 Lesson 4 Activity - \n");
