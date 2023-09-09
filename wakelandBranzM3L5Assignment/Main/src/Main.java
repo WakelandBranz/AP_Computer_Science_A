@@ -41,6 +41,8 @@ public class Main {
 
         // neatly print outputs
         System.out.println("If a, b and c are " + a + ", " + b + " and " + c + ", the roots are " + ans[0] + " and " + ans[1] + ".");
+
+        myScanner.close();
     }
 }
 /*
