@@ -26,7 +26,7 @@ public class WBCircle {
         radius = 0.f;
         // no need to do extra methods here, it would just waste time.
     }
-
+    
     public double area() {
         return Math.PI * (Math.pow(radius, 2)); // Pi(radius^2)
     }
@@ -47,7 +47,8 @@ public class WBCircle {
         System.out.print("Radius -> " + radius + "\nDiameter -> " + diameter + "\nArea -> " + area + "\nCircumference -> " + circumference + "\n");
     }
 
-    public static void main (String ars[]) throws Exception {
+    public static void main (String args[]) throws Exception {
+        // creating all testing instances of WBCircle
         WBCircle testCircle = new WBCircle(35.5);
         testCircle.printAttributes();
 
