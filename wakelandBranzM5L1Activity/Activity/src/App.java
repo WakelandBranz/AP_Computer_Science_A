@@ -20,6 +20,9 @@ public class App {
         boolean d = true && false || false; // operator precedence example
 
         System.out.printf("B -> %b\nC -> %b\nD -> %b", b, c, d);
+
+        System.out.printf("\n%d %d %d %d", (int)'A', (int)'P',
+            (int)'C', (int)'S');
     }
 }
 
