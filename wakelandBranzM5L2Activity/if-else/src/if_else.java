@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class App {
+public class if_else {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         System.out.print("What is your grade? -> ");
