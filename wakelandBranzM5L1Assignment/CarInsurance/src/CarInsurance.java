@@ -1,13 +1,3 @@
-/*
- * Wakeland Branz
- * Date: 10/03/2023
- * Seaforth High School
- * Using scanners to get an input, perform an algorithm, round to the nearest hundredth and truncate all trailing decimals.
- *
- * Description:  Takes an input of age and performs math on it based on the age entered.
- * Difficulties:  I initially forgot to truncate my decimals but I fixed that issue quuickly.
- * What I Learned:  How to use if statements with Java code.
- */
 
 import java.util.Scanner;
 
