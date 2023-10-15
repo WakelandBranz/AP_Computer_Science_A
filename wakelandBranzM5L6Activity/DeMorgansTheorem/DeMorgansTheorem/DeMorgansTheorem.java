@@ -1,7 +1,7 @@
 public class DeMorgansTheorem {
     public static void main(String[] args) throws Exception {
         int a = 5, b = 5;
-        // they never gave me anything to apply, but heres some notes
+        // the video lesson never gave me anything to apply, but heres some notes
 
         /*
          * + and * can be substituted for one another (the dude didn't explain this very well)
