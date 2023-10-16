@@ -42,14 +42,14 @@ public class CarInsurance {
         double insuranceCost = 0;
 
         if (age < 16) { // verify that driver can legally drive in NC
-            System.out.printf("You are too young to be driving at %d", age);
+            System.out.printf("You are too young to be driving at %.0f", age);
             return;
         }
 
-        if (age > 15 &&  age < 19) { // if age between 16 and 18
+        if (age > 15 &&  age < 18) { // if age between 16 and 18
             insuranceCost = roundToHundredths(age * 88.0);
         }
-        else if (age > 18 && age < 26) { // the assignment is somewhat poorly worded here, so I assume it is referring to being older than 18 and younger than 25
+        else if (age > 18 && age < 25) { // the assignment is somewhat poorly worded here, so I assume it is referring to being older than 18 and younger than 25
             insuranceCost = roundToHundredths(age * 72.0);
         }
         else {

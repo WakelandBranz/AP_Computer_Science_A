@@ -1,3 +1,14 @@
+/*
+ * Wakeland Branz
+ * Date: 10/15/2023
+ * Seaforth High School
+ * Apply Stanislau Ulam's theorem for integers 1-25
+ *
+ * Description:  Applies Stanislau Ulam's theorem for integers 1-25
+ * Difficulties:  I accidentally structured my algorithm in the wrong order, but using a Vector made it easier for me to display and store information.
+ * What I Learned:  How to use vectors in Java (sorry if this isn't what you wanted, I can change it if thats easier) and how to effectively use loops
+ */
+
 import java.util.*; // for vector utilities
 
 public class stanislauUlamTheorem {
@@ -41,7 +52,34 @@ public class stanislauUlamTheorem {
                 System.out.printf("%d ", currentList.get(j));
             }
 
-            System.out.println(""); // next line
+            System.out.println(); // next line
         }
     }
 }
+/* Sample output:
+ * 1: 4 2 1 
+ * 2: 1 
+ * 3: 10 5 16 8 4 2 1 
+ * 4: 2 1 
+ * 5: 16 8 4 2 1 
+ * 6: 3 10 5 16 8 4 2 1 
+ * 7: 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1         
+ * 8: 4 2 1 
+ * 9: 28 14 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1 
+ * 10: 5 16 8 4 2 1
+ * 11: 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+ * 12: 6 3 10 5 16 8 4 2 1
+ * 13: 40 20 10 5 16 8 4 2 1
+ * 14: 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+ * 15: 46 23 70 35 106 53 160 80 40 20 10 5 16 8 4 2 1
+ * 16: 8 4 2 1
+ * 17: 52 26 13 40 20 10 5 16 8 4 2 1
+ * 18: 9 28 14 7 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+ * 19: 58 29 88 44 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+ * 20: 10 5 16 8 4 2 1
+ * 21: 64 32 16 8 4 2 1
+ * 22: 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+ * 23: 70 35 106 53 160 80 40 20 10 5 16 8 4 2 1
+ * 24: 12 6 3 10 5 16 8 4 2 1 
+ * 25: 76 38 19 58 29 88 44 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+ */
