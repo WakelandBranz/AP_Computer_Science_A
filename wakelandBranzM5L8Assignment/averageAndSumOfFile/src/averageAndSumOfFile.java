@@ -28,10 +28,10 @@ public class averageAndSumOfFile {
             iter++;
         }
 
-        final double average = sum / iter;
+        final double AVERAGE = sum / iter;
 
         // neatly prints all necessary values
-        System.out.printf("Sum = %.0f\nCount of values = %d\nAverage = %f\n", sum, iter, average);
+        System.out.printf("Sum = %.0f\nCount of values = %d\nAverage = %f\n", sum, iter, AVERAGE);
 
         reader.close(); // free scanner
     }

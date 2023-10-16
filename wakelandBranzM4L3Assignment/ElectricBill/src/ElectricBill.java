@@ -18,6 +18,7 @@ public class ElectricBill {
         boolean valid = false; // if input is valid or not
         int result = 0;
 
+        // valid is a check to see if we should continue iterating
         while (!valid) {
             try { 
                 System.out.print("Enter KWH used: ");
@@ -48,25 +49,28 @@ public class ElectricBill {
 
     public static void main(String[] args) throws Exception {
         // constant variables for later math
-        final double costPerHour = 0.0425;
-        final double surchargeMultiple = 0.1;
-        final double cityUtilityTaxMultiple = 0.03;
-        final double latePenaltyTax = 1.04;
-        final int kwhUsed = getUserInput();
+        final double COSTPERHOUR = 0.0425;
+        final double SURCHARGEMULTIPLE = 0.1;
+        final double CITYUTILITYTAXMULTIPLE = 0.03;
+        final double LATEPENALTYTAX = 1.04;
+        final int KWHUSED = getUserInput();
         
-        double baseCost = kwhUsed * costPerHour;
-        double surcharge = baseCost * surchargeMultiple;
-        double cityUtilityTax = baseCost * cityUtilityTaxMultiple;
+        // sets up all values, constant variables are used to make predictable changes to these values with basic math.
+        double baseCost = KWHUSED * COSTPERHOUR;
+        double surcharge = baseCost * SURCHARGEMULTIPLE;
+        double cityUtilityTax = baseCost * CITYUTILITYTAXMULTIPLE;
         double total = baseCost + surcharge + cityUtilityTax;
-        double latePentaltyTotal = total * latePenaltyTax;
+        double latePentaltyTotal = total * LATEPENALTYTAX;
 
+        // now that their values have been assigned, round them to the nearest hundredth.
         baseCost = roundToHundredths(baseCost);
         surcharge = roundToHundredths(surcharge);
         cityUtilityTax = roundToHundredths(cityUtilityTax);
         total = roundToHundredths(total);
         latePentaltyTotal = roundToHundredths(latePentaltyTotal);
 
-        System.out.printf("\n        Wakeland's Electrics\n------------------------------------\nKilowatts used -> %d @ $0.0425\n------------------------------------\n", kwhUsed);
+        // neatly print all values
+        System.out.printf("\n        Wakeland's Electrics\n------------------------------------\nKilowatts used -> %d @ $0.0425\n------------------------------------\n", KWHUSED);
         System.out.printf("Base Charge -> $%.2f\nSurcharge -> $%.2f\nCitytax -> $%.2f\nTotal due -> $%.2f\nAfter May 20th total due -> $%.2f", baseCost, surcharge, cityUtilityTax, total, latePentaltyTotal);
     }
 }
