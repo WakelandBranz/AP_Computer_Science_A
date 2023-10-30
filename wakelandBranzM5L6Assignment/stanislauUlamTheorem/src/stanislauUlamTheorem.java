@@ -40,8 +40,10 @@ public class stanislauUlamTheorem {
     }
     public static void main(String[] args) throws Exception {
 
+        int i = 1;
+
         // apply theorem for 1 through 25 and print
-        for (int i = 1; i < 26; i++) {
+        while (i < 26) {
             Vector<Integer> currentList = applyTheorem(i);
 
             // prints which number you are applying the theorem to
@@ -53,6 +55,8 @@ public class stanislauUlamTheorem {
             }
 
             System.out.println(); // next line
+
+            i++; // iterate through next loop
         }
     }
 }
