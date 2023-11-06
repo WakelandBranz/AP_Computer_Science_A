@@ -26,7 +26,6 @@ public class App {
          * this does not guarantee execution.
          */
         {
-            int iteratorCounter = 0;
             int sum = 0;
             int i = 3;
 
@@ -34,7 +33,6 @@ public class App {
             while (i <= 79) {
                 sum += i;
                 i++;
-                iteratorCounter++;
             }
             System.out.printf("Sum of while: %d -> Total Iterations: %d\n", sum, i);
         }
