@@ -24,6 +24,12 @@ public class costCalculator {
         // add that to sum and print it, and then add to our iteration counter
         while (reader.hasNextDouble()) {
             next = reader.nextDouble();
+
+            // stop calculations when 0 is read
+            if (next == 0) {
+                break;
+            }
+            
             sum+=next;
             System.out.printf("$%.2f\n", next);
             count++;
@@ -35,3 +41,20 @@ public class costCalculator {
         System.out.printf("Sum of costs: $%.2f\nNumber of costs: %d\nAverage cost: $%.2f", sum, count, average); 
     }
 }
+
+/*
+ * Sample output:
+ * $14.99
+ * $39.99
+ * $69.95
+ * $74.95
+ * $59.95
+ * $49.95
+ * $75.50
+ * $14.50
+ * $29.95
+ * $29.95
+ * Sum of costs: $459.68
+ * Number of costs: 10
+ * Average cost: $45.97
+ */
