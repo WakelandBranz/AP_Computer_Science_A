@@ -77,13 +77,15 @@ public class Magpie3
 		int psn = phrase.toLowerCase().indexOf(
 				goal.toLowerCase(), startPos);
 
+		String before = " ", after = " ";
+
 		// Refinement--make sure the goal isn't part of a
 		// word
 		while (psn >= 0)
 		{
 			// Find the string of length 1 before and after
 			// the word
-			String before = " ", after = " ";
+			before = " "; after = " ";
 			if (psn > 0)
 			{
 				before = phrase.substring(psn - 1, psn)
@@ -105,6 +107,7 @@ public class Magpie3
 					&& ((after.compareTo("a") < 0) || (after
 							.compareTo("z") > 0)))
 			{
+				System.out.printf("phrase: %s\npsn: %s\nbefore: %s\nafter: %s\n", phrase, psn, before, after);
 				return psn;
 			}
 

@@ -1,3 +1,19 @@
+/*
+ * Wakeland Branz
+ * Date: 11/28/2023
+ * Seaforth High School
+ * Chatbot phrase recognition
+ * 
+ * Keywords:
+ * I like (user input) -> "What do you like about (user input)?"
+ * I do not want (user input) -> "Why don't you want (user input)?"
+ * I like (user input 1) and (user input 2) -> "What do you like about (user input 1) and (user input 2)?"
+ *
+ * Description:  Takes user input and checks for phrases, responds with keywords within said phrases.
+ * Difficulties:  Figuring out the logic for how to effectively extract phrases from key words was difficult when it came to two inputs, but I figured it out after drawing out the scenario on my whiteboard.
+ * What I Learned:  How to extract specific phrases from a set of keywords.
+ */
+
 /**
  * A program to carry on conversations with a human user.
  * This version:
@@ -54,6 +70,20 @@ public class Magpie4
 			response = transformIWantToStatement(statement);
 		}
 
+		else if (findKeyword(statement, "I do not want", 0) >= 0) {
+			response = transformIDoNotWantStatement(statement);
+		}
+
+		else if (findKeyword(statement, "I like", 0) >= 0) {
+			int psn = findKeyword(statement, "I like", 0);
+			if (findKeyword(statement, "and", psn) >= 0) {
+				response = transformILikeAndStatement(statement);
+			}
+			else {
+				response = transformILikeStatement(statement);
+			}
+		}
+
 		else
 		{
 			// Look for a two word (you <something> me)
@@ -93,6 +123,62 @@ public class Magpie4
 		int psn = findKeyword (statement, "I want to", 0);
 		String restOfStatement = statement.substring(psn + 9).trim();
 		return "What would it mean to " + restOfStatement + "?";
+	}
+
+	private String transformIDoNotWantStatement(String statement) {
+		// trim
+		statement = statement.trim().toLowerCase();
+		// Remove the final period, if there is one
+		String lastChar = statement.substring(statement
+				.length() - 1);
+		if (lastChar.equals("."))
+		{
+			statement = statement.substring(0, statement
+					.length() - 1);
+		}
+		int psn = findKeyword(statement, "i do not want", 0);
+		String restOfStatement = statement.substring(psn + 14).trim();
+		return "Why don't you want " + restOfStatement + "?";
+	}
+
+	private String transformILikeStatement(String statement) {
+		// trim
+		statement = statement.trim().toLowerCase();
+		// Remove the final period, if there is one
+		String lastChar = statement.substring(statement
+				.length() - 1);
+		if (lastChar.equals("."))
+		{
+			statement = statement.substring(0, statement
+					.length() - 1);
+		}
+		// find the first occurance of "i like"
+		int psn = findKeyword(statement, "i like", 0);
+
+		// get the rest of the statement
+		String restOfStatement = statement.substring(psn + 6).trim();
+		return "What do you like about " + restOfStatement + "?";
+	}
+
+	private String transformILikeAndStatement(String statement) {
+		// trim
+		statement = statement.trim().toLowerCase();
+		// Remove the final period, if there is one
+		String lastChar = statement.substring(statement
+				.length() - 1);
+		if (lastChar.equals("."))
+		{
+			statement = statement.substring(0, statement
+					.length() - 1);
+		}
+		// find the first occurance of "i like" as well as "and"
+		int psnOfILike = findKeyword(statement, "i like", 0);
+		int psnOfAnd = findKeyword(statement, "and", psnOfILike + 6);
+
+		// based on the positions of "i like" and "and", subtract certain sections of the string to attain keywords
+		String firstStatement = statement.substring(psnOfILike + 6, psnOfAnd).trim();
+		String secondStatement = statement.substring(psnOfAnd + 3).trim();
+		return "What do you like about " + firstStatement + " and " + secondStatement + "?";
 	}
 
 	
@@ -217,3 +303,14 @@ public class Magpie4
 	}
 
 }
+
+/*
+ * Sample output:
+ * Hello, let's talk.
+ * I like things
+ * What do you like about things?
+ * I do not want things
+ * Why don't you want things?
+ * I like apples and oranges
+ * What do you like about apples and oranges?
+ */
