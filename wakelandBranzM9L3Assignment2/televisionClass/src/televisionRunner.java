@@ -17,6 +17,7 @@ class Television {
     int channel; // channels range from 1 to 5
     int volume; // volume ranges from 1 to 10
 
+    // meet assignment requirements by setting default constructor with the following values
     public Television() {
         this.powerStage = false;
         this.channel = 1;
