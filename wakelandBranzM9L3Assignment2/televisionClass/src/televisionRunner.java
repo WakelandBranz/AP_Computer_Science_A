@@ -148,6 +148,7 @@ public class televisionRunner {
         scanner.close();
     }
 
+    // concise way to determine whether or not the user wants to increment the volume up or down
     static public boolean upOrDown(String input) {
         if (input.equals("up")) {
             return true;
