@@ -1,11 +1,14 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println(getQuarters(210));
+        System.out.println(method22(5));
     }
 
-    public static int getQuarters(int cents) {
-        return cents / 25;
-    }
+    public static int method22(int y)
+    {
+        for (int z = 1; z <= 5; z ++)
+            y += z;
+        return y;
+}
     
     
 }
