@@ -1,3 +1,13 @@
+/*
+ * Wakeland Branz
+ * Date: 1/4/2024
+ * Seaforth High School
+ *
+ * Description:  Gathers user address data in a class from user input
+ * Difficulties:  I accidentally tried to use my scanner object before instantiating it, but some basic tracing led me back to where I needed to look.
+ * What I Learned:  How to gather user input and hide variables from my user for ease of use.
+ */
+
 import java.util.*;
 
 public class mailingAddress {
@@ -144,3 +154,16 @@ class Address {
         System.out.printf("%S\n%S\n%S\n%S\n", this.street, this.city, this.state, this.zip);
     }
 }
+
+/* Sample output:
+ * Enter street or P.O. Box: 1212 South Riverside Drive
+ * Enter city: New Smyrna Beach
+ * Enter state (2-letter code): FL
+ * Enter zip code (5 digits): 32168
+ * 1212 SOUTH RIVERSIDE DRIVE
+ * NEW SMYRNA BEACH, FL 32168
+ * 1212 SOUTH RIVERSIDE DRIVE
+ * NEW SMYRNA BEACH
+ * FL
+ * 32168
+ */
