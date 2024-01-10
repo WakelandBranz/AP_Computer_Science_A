@@ -43,7 +43,7 @@ class CStock {
 
         this.scanner = scanner;
 
-        this.symbol = inputSymbol(); // get symbol (ex. AAPL)
+        inputSymbol(); // get symbol (ex. AAPL)
         this.trades = new ArrayList<>();
 
         // find the amount of trades the user made;
@@ -94,10 +94,10 @@ class CStock {
 
     // user input
 
-    private String inputSymbol() {
+    private void inputSymbol() {
         System.out.println("Enter stock symbol: ");
 
-        return scanner.nextLine().trim();
+        this.symbol = scanner.nextLine().trim();
     }
 
     private void inputNewPurchase(int iteration) {
