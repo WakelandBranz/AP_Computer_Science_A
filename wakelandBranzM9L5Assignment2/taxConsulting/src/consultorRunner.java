@@ -29,24 +29,20 @@ class CConsultation {
     }
 
     // utility
-
     private void calculateConsultingFee() {
         double regularRate = (hourlyRate / 60.0) * consultingTime;
 
         if (income <= 25000.0) {
             if (consultingTime <= 30.0) {
                 consultingFee = 0;
+            } else {
+                consultingFee = 0.5 * regularRate;
             }
-            else {
-                consultingFee = 0.5 * (regularRate - (hourlyRate / 60.0));
-            }
-        }
-        else {
+        } else {
             if (consultingTime <= 20) {
                 consultingFee = 0;
-            }
-            else {
-                consultingFee = 0.75 * (regularRate - (hourlyRate / 60.0));
+            } else {
+                consultingFee = 0.75 * regularRate;
             }
         }
     }
