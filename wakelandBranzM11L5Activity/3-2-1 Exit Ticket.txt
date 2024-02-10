@@ -1,0 +1,13 @@
+3 things I learned from these videos:
+    1: ArrayList can only store objects.
+    2: When you put a primitive into an ArrayList, it turns into its wrapper class.
+    3: The methods of the list interface can also be used for ArrayList.
+    4: Generics allow different types of values to be stored.
+    5: ArrayList.add appends a variable to the end of an array
+
+2 things I already knew:
+    1: Array lists are similar to vectors since they are stored on the heap and have a mutable size
+    2: Array lists can store multiple types of variables at once
+
+1 question I still have about this subject:
+    1: How much slower are arrays vs. ArrayLists?
