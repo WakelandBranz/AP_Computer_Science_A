@@ -465,6 +465,7 @@ public class SimplePicture implements DigitalPicture
      file = new File(FileChooser.getMediaPath(this.fileName));
      if (!file.canRead())
      {
+        System.out.println("test");
        throw new IOException(this.fileName +
                              " could not be opened. Check that you specified the path");
      }
