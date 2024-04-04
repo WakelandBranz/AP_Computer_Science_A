@@ -2,7 +2,8 @@ import core.data.*;
 
 public class Welcome01 {
    public static void main(String[] args) {
-      String id = "KATL";
+      //String id = "KATL";
+      String id = "KDAB";
       DataSource ds = DataSource.connect("http://weather.gov/xml/current_obs/" + id + ".xml"); 
       ds.setCacheTimeout(15 * 60);  
       ds.load();

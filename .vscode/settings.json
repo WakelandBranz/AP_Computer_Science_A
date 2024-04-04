@@ -1,3 +1,7 @@
 {
-    "cmake.configureOnOpen": false
+    "cmake.configureOnOpen": false,
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "M15_StudentFiles_DataLab\\StudentFiles_DataLab\\DataStudentCode\\sinbad.jar"
+    ]
 }
